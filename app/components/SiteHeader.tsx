@@ -21,11 +21,13 @@ export function SiteHeader() {
       {isHome && (
         <div className="relative h-52 sm:h-64">
           <Image
-            src="/header-books.jpg"
+            src="/header-pages.jpg"
             alt=""
             fill
             priority
-            className="object-cover"
+            quality={90}
+            sizes="100vw"
+            className="object-cover object-center"
           />
           <div className="absolute inset-0 flex items-center justify-center px-4">
             <div className="bg-white/90 px-6 py-4 text-center">
