@@ -27,7 +27,7 @@ export function SiteHeader() {
             priority
             quality={90}
             sizes="100vw"
-            className="object-cover object-center"
+            className="object-cover object-center opacity-70"
           />
           <div className="absolute inset-0 flex items-center justify-center px-4">
             <div className="bg-white/90 px-6 py-4 text-center">

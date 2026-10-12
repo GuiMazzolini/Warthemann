@@ -5,16 +5,19 @@ const offers = [
   {
     title: 'Für Kitas',
     line: 'Der Erzählkoffer geht auf.',
+    href: '/angebote#kitas',
     icon: StorySuitcase,
   },
   {
     title: 'Für Schulen',
     line: 'In 90 Minuten um die Welt.',
+    href: '/angebote#grundschule',
     icon: WorldJourney,
   },
   {
     title: 'Für Fortbildungen',
     line: 'Vorlesen, Kamishibai, neue Bücher.',
+    href: '/angebote#fortbildungen',
     icon: Kamishibai,
   },
 ];
@@ -89,7 +92,7 @@ export default function Home() {
             return (
               <li key={offer.title}>
                 <Link
-                  href="/angebote"
+                  href={offer.href}
                   className="flex h-full flex-col border border-stone-200 bg-white px-5 py-6 text-stone-900 items-center"
                 >
                   <Icon/>

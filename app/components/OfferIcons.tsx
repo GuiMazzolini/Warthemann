@@ -1,6 +1,6 @@
 export function StorySuitcase() {
   return (
-    <svg viewBox="0 0 80 80" className="h-16 w-16 text-stone-700" aria-hidden="true">
+    <svg viewBox="0 0 80 80" className="h-16 w-16" aria-hidden="true">
       <path
         d="M24 28c0-6 4-10 16-10s16 4 16 10"
         fill="none"
@@ -40,7 +40,7 @@ export function StorySuitcase() {
 
 export function WorldJourney() {
   return (
-    <svg viewBox="0 0 80 80" className="h-16 w-16 text-stone-700" aria-hidden="true">
+    <svg viewBox="0 0 80 80" className="h-16 w-16" aria-hidden="true">
       <circle
         cx="38"
         cy="40"
@@ -71,7 +71,7 @@ export function WorldJourney() {
 
 export function Kamishibai() {
   return (
-    <svg viewBox="0 0 80 80" className="h-16 w-16 text-stone-700" aria-hidden="true">
+    <svg viewBox="0 0 80 80" className="h-16 w-16" aria-hidden="true">
       <path d="M18 58h44" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
       <path d="M22 58V28h36v30" fill="none" stroke="currentColor" strokeWidth="1.6" />
       <path d="M22 28h36l-4-6H26l-4 6z" fill="currentColor" fillOpacity="0.08" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" />
