@@ -21,10 +21,10 @@ export default function Angebote() {
             <section
               key={group.id}
               id={group.id}
-              className="-mx-6 scroll-mt-8 border-y border-stone-300 bg-[#c4a574] p-2 lg:mx-0 lg:border"
+              className="-mx-6 scroll-mt-8 bg-[#c4a574] pt-2 lg:mx-0 lg:pt-0 lg:pl-2"
             >
-              <div className="border border-stone-300 bg-card px-6 py-12 text-stone-900 sm:px-10 lg:px-14 lg:py-16">
-                <h2 className="mx-auto w-fit border-b border-[#c4a574] pb-2 text-center font-serif text-2xl">
+              <div className="bg-card px-6 py-12 text-stone-900 sm:px-10 lg:px-14 lg:py-16">
+                <h2 className="mx-auto w-fit border-b border-[#d2a55e] pb-2 text-center font-serif text-2xl">
                   {group.title}
                 </h2>
                 <div className="relative mt-12">

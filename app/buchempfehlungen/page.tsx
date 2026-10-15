@@ -1,9 +1,28 @@
+import { BookCard } from './BookCard';
 import { BookDoodles } from './BookDoodles';
 
-const books = [
+const cardColor = {
+  kinder: 'bg-[#d7e6f2]',
+  jugend: 'bg-[#f3e0d4]',
+  erwachsene: 'bg-card',
+};
+
+type AgeGroup = keyof typeof cardColor;
+
+const books: {
+  title: string;
+  age: string;
+  group: AgeGroup;
+  author: string;
+  publisher: string;
+  price: string;
+  image: string;
+  text: string[];
+}[] = [
   {
     title: 'Die Prinzessin, die auszog, den Prinzen zu retten',
     age: 'Ab 8 Jahren',
+    group: 'kinder',
     author: 'Eva Rottmann',
     publisher: 'Jacoby und Stuart',
     price: '12€',
@@ -16,6 +35,7 @@ const books = [
   {
     title: 'Wie ein leuchtender Stern',
     age: 'Junge Erwachsene',
+    group: 'jugend',
     author: 'Tahereh Mafi',
     publisher: 'Sauerländer Verlag',
     price: '16€',
@@ -28,6 +48,7 @@ const books = [
   {
     title: 'Dinge, die so nicht bleiben können',
     age: 'Junge Erwachsene',
+    group: 'jugend',
     author: 'Michael Gerard Bauer',
     publisher: 'Hanser Verlag',
     price: '15€',
@@ -39,52 +60,6 @@ const books = [
   },
 ];
 
-function BookCard({
-  book,
-  imageFirst,
-}: {
-  book: (typeof books)[number];
-  imageFirst: boolean;
-}) {
-  return (
-    <article className="-mx-6 border-y border-stone-300 bg-card px-6 py-12 text-left text-stone-900 sm:px-10 lg:mx-0 lg:border lg:px-14 lg:py-16">
-      <div
-        className={`grid items-start gap-10 lg:items-center lg:gap-0 ${
-          imageFirst
-            ? 'lg:grid-cols-[minmax(0,4fr)_minmax(0,7fr)]'
-            : 'lg:grid-cols-[minmax(0,7fr)_minmax(0,4fr)]'
-        }`}
-      >
-        <figure
-          className={`text-center lg:px-4 ${
-            imageFirst
-              ? 'lg:border-r lg:border-stone-300'
-              : 'lg:order-2 lg:border-l lg:border-stone-300'
-          }`}
-        >
-          <img src={book.image} alt={book.title} className="mx-auto w-44" />
-          <figcaption className="mt-4 text-sm leading-relaxed">
-            <p>{book.author}</p>
-            <p className="text-stone-600">{book.publisher}</p>
-            <p className="text-stone-600">{book.price}</p>
-          </figcaption>
-        </figure>
-        <div className={`lg:px-10 ${imageFirst ? '' : 'lg:order-1'}`}>
-          <p className="text-sm text-stone-500">{book.age}</p>
-          <h2 className="mt-2 w-fit border-b border-[#c4a574] pb-2 font-serif text-2xl leading-snug">
-            {book.title}
-          </h2>
-          {book.text.map((paragraph) => (
-            <p key={paragraph} className="mt-6 leading-relaxed">
-              {paragraph}
-            </p>
-          ))}
-        </div>
-      </div>
-    </article>
-  );
-}
-
 export default function Buchempfehlungen() {
   return (
     <div className="relative">
@@ -93,7 +68,12 @@ export default function Buchempfehlungen() {
         <h1 className="text-center font-serif text-4xl">Buchempfehlungen</h1>
         <div className="mt-12 space-y-14">
           {books.map((book, index) => (
-            <BookCard key={book.title} book={book} imageFirst={index % 2 === 0} />
+            <BookCard
+              key={book.title}
+              book={book}
+              imageFirst={index % 2 === 0}
+              colorClass={cardColor[book.group]}
+            />
           ))}
         </div>
       </main>
