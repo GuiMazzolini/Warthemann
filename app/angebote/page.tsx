@@ -21,21 +21,21 @@ export default function Angebote() {
             <section
               key={group.id}
               id={group.id}
-              className="scroll-mt-8 border border-stone-300 bg-[#c4a574] p-2"
+              className="-mx-6 scroll-mt-8 border-y border-stone-300 bg-[#c4a574] p-2 lg:mx-0 lg:border"
             >
-              <div className="border border-stone-300 bg-white px-8 py-12 text-stone-900 sm:px-14 sm:py-16">
+              <div className="border border-stone-300 bg-card px-6 py-12 text-stone-900 sm:px-10 lg:px-14 lg:py-16">
                 <h2 className="mx-auto w-fit border-b border-[#c4a574] pb-2 text-center font-serif text-2xl">
                   {group.title}
                 </h2>
                 <div className="relative mt-12">
                   <div
-                    className="absolute inset-y-0 left-1/2 hidden w-px -translate-x-1/2 bg-stone-300 sm:block"
+                    className="absolute inset-y-0 left-1/2 hidden w-px -translate-x-1/2 bg-stone-300 lg:block"
                     aria-hidden="true"
                   />
-                  <ul className="grid gap-8 text-center sm:grid-cols-2 sm:gap-x-16 sm:text-left">
+                  <ul className="grid gap-8 text-center lg:grid-cols-2 lg:gap-x-16 lg:text-left">
                     {group.offers.map((offer) => (
                       <li key={offer.title}>
-                        <h3 className="mx-auto w-fit border-b border-[#c4a574] pb-1 font-serif text-lg sm:mx-0">
+                        <h3 className="mx-auto w-fit border-b border-[#c4a574] pb-1 font-serif text-lg lg:mx-0">
                           {offer.title}
                         </h3>
                         {offer.line ? (

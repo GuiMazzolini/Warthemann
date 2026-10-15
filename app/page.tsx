@@ -24,8 +24,8 @@ const offers = [
 
 export default function Home() {
   return (
-    <main className="mx-auto w-full max-w-4xl px-6 py-16">
-      <div className="mt-8 flex flex-col items-center gap-8 sm:flex-row sm:items-center">
+    <main className="mx-auto w-full max-w-4xl px-2 sm:px-6 py-16">
+      <div className="mt-8 flex flex-col items-center gap-8 lg:flex-row lg:items-center">
         <img
           src="/andrea.jpg"
           alt="Andrea Warthemann"
@@ -49,7 +49,7 @@ export default function Home() {
         </figure>
       </div>
 
-      <div className="mt-14 space-y-6 border-t border-stone-300 pt-10 text-left text-lg leading-relaxed">
+      <div className="-mx-2 mt-14 space-y-6 border-t border-stone-300 bg-card px-6 py-12 pt-10 text-left text-lg leading-relaxed text-stone-900 sm:-mx-6 sm:px-10 lg:mx-0 lg:px-14 lg:py-16">
         <p>
           <span className="float-left mr-2 font-serif text-5xl leading-none text-[#c4a574]">
             S
@@ -93,7 +93,7 @@ export default function Home() {
               <li key={offer.title}>
                 <Link
                   href={offer.href}
-                  className="flex h-full flex-col border border-stone-200 bg-white px-5 py-6 text-stone-900 items-center"
+                  className="flex h-full flex-col border border-stone-200 bg-card px-5 py-6 text-stone-900 items-center"
                 >
                   <Icon/>
                   <span className="mt-4 text-lg">{offer.title}</span>
